@@ -1,6 +1,31 @@
+/*
+Autor: Abregú Mariela.
+Enunciado Switch 08.
+*/
+
 function mostrar()
 {
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+	let destinoIngresado;
+	let mensaje;
 
-}//FIN DE LA FUNCIÓN
+	destinoIngresado=document.getElementById("txtIdDestino").value;
+    
+    switch(destinoIngresado)
+	{
+		case "Bariloche":
+			mensaje="Hace Frio";
+		    break;
+		case "Cataratas":
+			mensaje="Hace Calor";
+		    break;
+		case "Mar del plata":
+			mensaje="Hace Calor";
+		    break;
+		case "Ushuaia":
+			mensaje="Hace Frio";
+		    break;
+		default:
+			mensaje="No existe información";	
+	}
+	alert(mensaje);
+}

@@ -1,10 +1,39 @@
+/*
+Autor: Abregú Mariela.
+Enunciado Switch 02.
+*/
+
 function mostrar()
 {
-	//tomo el mes
-	var mesDelAño =txtIdMes.value;
-	alert(mesDelAño);
+	let mes;
+	let mensaje;
 
+	mes=document.getElementById("txtIdMes").value;
+	
 
+	switch(mes){
+		case "Enero":
+		case "Febrero":
+		case "Marzo":
+		case "Abril":
+		case "Mayo":
+		case "Junio":
+			mensaje="falta para el invierno";
+			break;
+		case "Julio":
+		case "Agosto":
+			mensaje="abrigate que hace frio";
+			break;
+		case "Septiembre":
+		case "Octubre":
+		case "Noviembre":
+		case "Diciembre":
+			mensaje="ya pasamos el invierno, ahora calor";
+			break;
 
-
-}//FIN DE LA FUNCIÓN
+		/*default:
+			mensaje="";
+			break; en este caso no haría falta, ta que todos los meses tienen asignado un mensaje*/
+	}
+	alert(mensaje);
+}
